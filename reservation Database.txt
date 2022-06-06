@@ -1,0 +1,22 @@
+Create Database Reservation;
+use Reservation
+Go
+Create table reservation(
+		Id int Not Null primary key ,
+		Name varchar(100) Not Null,
+		Email varchar(100) Not Null,
+		PhoneNumber int Not Null ,
+		Address varchar(255) Not NUll,
+		IdProof varchar(100) Not Null);
+
+select * from reservation;
+
+Alter table reservation add RoomType varchar(100),NoOfMembers int;
+
+insert into reservation values(3,'Sri','Sri@gmail.com',938477,'hyderabad','Pancard',4533);
+
+delete from reservation where Id=4;
+
+Alter table reservation drop Column TotalAmount;
+Alter table reservation Alter Column CheckIn varchar(255);
+Alter table reservation Alter Column CheckOut varchar(255); 
